@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+       min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(70, 50, 180, 0.25), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(0, 150, 255, 0.20), transparent 30%),
+        #080b16;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.calculator {
+    width: 320px;
+
+    padding: 20px;
+
+    background: #2b2b2b;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Display */
+
+.display {
+    width: 100%;
+    height: 80px;
+
+    margin-bottom: 20px;
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    background: #111;
+    color: white;
+
+    border-radius: 12px;
+
+    font-size: 32px;
+
+    overflow: hidden;
+}
+
+/* Buttons container */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+/* All buttons */
+
+button {
+    height: 60px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #444;
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+/* Button hover */
+
+button:hover {
+    background: #555;
+}
+
+/* Operator buttons */
+
+.operator {
+    background: #ff9500;
+}
+
+.operator:hover {
+    background: #ffad33;
+}
+
+/* Clear button */
+
+.clear {
+    background: #777;
+}
+
+.clear:hover {
+    background: #888;
+}
+
+/* Equal button */
+
+.equal {
+    background: #2196f3;
+
+    grid-row: span 2;
+}
+
+.equal:hover {
+    background: #42a5f5;
+}
+
+/* Zero button */
+
+.zero {
+    grid-column: span 2;
+}
+
+.team {
+    margin-top: 20px;
+    padding-top: 15px;
+
+    text-align: center;
+
+    border-top: 1px solid #444;
+}
+
+.team h3 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.team p {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+
+.members span {
+    color: #ccc;
+    background: #383838;
+
+    padding: 5px 8px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+}
+
+body::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+
+    background-size: 40px 40px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(80, 60, 255, 0.12);
+
+    filter: blur(60px);
+
+    top: -100px;
+    right: -80px;
+
+    pointer-events: none;
+}
+
+.calculator {
+    width: min(90%, 380px);
+    padding: 20px;
+
+    position: relative;
+    z-index: 2;
+
+    background: rgba(30, 30, 45, 0.92);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(80, 70, 255, 0.12);
+}

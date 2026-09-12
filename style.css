@@ -34,8 +34,6 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Display */
-
 .display {
     width: 100%;
     height: 80px;
@@ -57,8 +55,6 @@ body {
     overflow: hidden;
 }
 
-/* Buttons container */
-
 .buttons {
     display: grid;
 
@@ -66,8 +62,6 @@ body {
 
     gap: 10px;
 }
-
-/* All buttons */
 
 button {
     height: 60px;
@@ -83,13 +77,9 @@ button {
     cursor: pointer;
 }
 
-/* Button hover */
-
 button:hover {
     background: #555;
 }
-
-/* Operator buttons */
 
 .operator {
     background: #ff9500;
@@ -98,8 +88,6 @@ button:hover {
 .operator:hover {
     background: #ffad33;
 }
-
-/* Clear button */
 
 .clear {
     background: #777;
@@ -121,49 +109,8 @@ button:hover {
     background: #42a5f5;
 }
 
-/* Zero button */
-
 .zero {
     grid-column: span 2;
-}
-
-.team {
-    margin-top: 20px;
-    padding-top: 15px;
-
-    text-align: center;
-
-    border-top: 1px solid #444;
-}
-
-.team h3 {
-    color: white;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.team p {
-    color: #aaa;
-    font-size: 13px;
-    margin-bottom: 10px;
-}
-
-.members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-}
-
-.members span {
-    color: #ccc;
-    background: #383838;
-
-    padding: 5px 8px;
-
-    border-radius: 6px;
-
-    font-size: 11px;
 }
 
 body::before {
